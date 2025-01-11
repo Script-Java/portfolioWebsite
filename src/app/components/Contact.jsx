@@ -1,7 +1,41 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import { IoIosSend } from "react-icons/io";
 
 function Contact() {
+  const [showToast, setShowToast] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setShowToast(true);
+        e.target.reset();
+        setTimeout(() => setShowToast(false), 3000); // Hide toast after 3 seconds
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('An error occurred. Please try again later.');
+    }
+  };
+
   return (
     <div id='contact'>
       <div className="my-40">
@@ -10,11 +44,8 @@ function Contact() {
           <p className='text-3xl my-4'>Let's Work 🫱🏼‍🫲🏽</p>
           <form
             className='flex flex-col w-full gap-4'
-            action="/"
-            method="POST"
-            data-netlify="true"
+            onSubmit={handleSubmit}
           >
-            <input type="hidden" name="form-name" value="contact" />
             <input
               type="text"
               name="name"
@@ -41,6 +72,14 @@ function Contact() {
           </form>
         </div>
       </div>
+
+      {showToast && (
+        <div className="toast toast-end toast-top">
+          <div className="alert alert-success">
+            <span>Message sent successfully.</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
