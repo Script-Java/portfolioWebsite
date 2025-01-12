@@ -39,7 +39,7 @@ function Contact() {
   return (
     <div id='contact'>
       <div className="my-40">
-        <h3 className="text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">Contact Me</h3>
+        <h3 className="text-5xl lg:text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">Contact Me</h3>
         <div className="p-4">
           <p className='text-3xl my-4'>Let's Work 🫱🏼‍🫲🏽</p>
           <form

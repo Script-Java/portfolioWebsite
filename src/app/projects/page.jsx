@@ -73,7 +73,7 @@ export default function Portfolio() {
             </div>
 
             <div className="my-40">
-                <h3 className="text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">All Projects</h3>
+                <h3 className="text-5xl lg:text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">All Projects</h3>
 
                 <div>
                     <div>
