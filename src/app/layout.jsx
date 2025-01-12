@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://atrinshahroudi.com"),
-  title: "Atrin Shahroudi",
-  description: "My name is Atrin Shahroudi, I help grow online presence for businesses and individuals.",
+  title: "Atrin Shahroudi | Web Developer & SEO Specialist",
+  description:
+    "Atrin Shahroudi - Expert in web development, SEO, and digital marketing. I help businesses and individuals grow their online presence with tailored strategies and optimized solutions.",
   keywords: [
     "Atrin Shahroudi",
     "Web Developer",
@@ -39,7 +40,34 @@ export const metadata = {
     "TailwindCSS",
     "Frontend Development",
     "Marketing Strategies",
+    "Performance Optimization",
+    "User Experience Design",
+    "Conversion Rate Optimization",
+    "Responsive Design",
+    "Analytics",
+    "Content Marketing",
+    "Pay-Per-Click Advertising",
+    "Brand Awareness",
+    "Search Engine Optimization",
+    "Website Maintenance",
   ],
+  author: "Atrin Shahroudi",
+  applicationName: "Atrin Shahroudi Portfolio",
+  openGraph: {
+    type: "website",
+    url: "https://atrinshahroudi.com",
+    title: "Atrin Shahroudi | Web Developer & SEO Specialist",
+    description:
+      "Providing web development, SEO, and digital marketing solutions to help businesses grow their online presence.",
+    images: [
+      {
+        url: '../app/assets/preview.jpg', // Replace with your actual OG image URL
+        width: 1200,
+        height: 630,
+        alt: "Atrin Shahroudi - Web Developer & SEO Specialist",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
