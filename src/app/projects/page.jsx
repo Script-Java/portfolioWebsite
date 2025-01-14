@@ -3,9 +3,7 @@
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-
-import logo from "../assets/logo.svg";
+import Navbar from "../components/Navbar";
 import img1 from "../assets/mtl.jpg";
 import img2 from "../assets/TFPNB.jpg";
 import img3 from "../assets/tfsm.jpg";
@@ -51,26 +49,7 @@ export default function Portfolio() {
 
     return (
         <div className="container mx-auto p-4">
-            <div className="navbar bg-base-100">
-                <div className="flex-1">
-                    <a className="btn btn-ghost">
-                        <Image src={logo} alt="Atrin logo" width={40} height={40} />
-                    </a>
-                </div>
-                <ul className="gap-4">
-                    <Link href="/" passHref>
-                        <li className="btn btn-secondary">
-                            <motion.button
-                                className="flex items-center"
-                                whileHover={{ scale: 1.5 }}
-                                whileTap={{ scale: 0.9 }}
-                            >
-                                Back to Home
-                            </motion.button>
-                        </li>
-                    </Link>
-                </ul>
-            </div>
+            <Navbar></Navbar>
 
             <div className="my-40">
                 <h3 className="text-5xl lg:text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">All Projects</h3>

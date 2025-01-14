@@ -39,16 +39,16 @@ const Navbar = () => {
               </div>
               <ul className=" gap-4 lg:flex md:hidden hidden">
                 <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('home')}>Home</motion.button>
+                  <Link href={'/'} passHref>Home</Link>
                 </li>
                 <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('projects')}>Projects</motion.button>
+                  <Link href={'/projects'} passHref>Projects</Link>
                 </li>
                 <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('about')}>About</motion.button>
+                  <Link href={'/blog'} passHref>Blogs</Link>
                 </li>
                 <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('contact')}>Contact</motion.button>
+                  <Link href={'/contact'} passHref>Contact</Link>
                 </li>
                 <li className="btn btn-secondary">
                   <motion.button className="flex items-center" whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={handleDownload}>Resume <span><MdOutlineDownloading className="text-xl"/></span></motion.button>
@@ -64,21 +64,21 @@ const Navbar = () => {
             {menuOpen && (
               <div className="">
                 <ul className="menu">
-                <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('home')}>Home</motion.button>
-                </li>
-                <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('about')}>About</motion.button>
-                </li>
-                <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('projects')}>Projects</motion.button>
-                </li>
-                <li className="btn">
-                  <motion.button whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={() => scrollToSection('contact')}>Contact</motion.button>
-                </li>
-                <li className="btn btn-secondary">
-                  <motion.button className="flex items-center" whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={handleDownload}>Resume <span><MdOutlineDownloading className="text-xl"/></span></motion.button>
-                </li>
+                  <li className="btn">
+                    <Link href={'/'} passHref>Home</Link>
+                  </li>
+                  <li className="btn">
+                    <Link href={'/projects'} passHref>Projects</Link>
+                  </li>
+                  <li className="btn">
+                    <Link href={'/blog'} passHref>Blogs</Link>
+                  </li>
+                  <li className="btn">
+                    <Link href={'/contact'} passHref>Contact</Link>
+                  </li>
+                  <li className="btn btn-secondary">
+                    <motion.button className="flex items-center" whileHover={{ scale: 1.5 }} whileTap={{ scale: 0.9 }} onClick={handleDownload}>Resume <span><MdOutlineDownloading className="text-xl"/></span></motion.button>
+                  </li>
 
                 </ul>
               </div>

@@ -35,7 +35,7 @@ const Landing = () => {
                                     Resume <MdOutlineDownloading className="text-2xl" />
                                 </button>
                                 <div className="flex gap-4 border-l-2 border-black pl-4">
-                                    <Link href="https://www.instagram.com/atrin.shahroudi/" className="btn btn-accent text-xl rounded-full" passHref>
+                                    <Link href="https://www.instagram.com/atrinshahroudi/" className="btn btn-accent text-xl rounded-full" passHref>
                                             <FaInstagram />
                                     </Link>
                                     <Link href="https://www.linkedin.com/in/atrin-shahroudi/" className="btn btn-accent text-xl rounded-full" passHref>

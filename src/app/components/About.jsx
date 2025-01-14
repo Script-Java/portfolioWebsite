@@ -9,7 +9,7 @@ import tehran from "../assets/tehran.jpg";
 const About = () => {
 
     return (
-        <div id="about" className="my-20">
+        <div id="about" className="my-40">
             <h3 className="text-5xl lg:text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">About me</h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

@@ -11,7 +11,7 @@ import { FaArrowRight } from "react-icons/fa";
 const Projects = () => {
 
     return (
-        <div id="projects" className="my-20">
+        <div id="projects" className="my-40">
             <h3 className="text-5xl lg:text-6xl uppercase text-center lg:text-start p-4 my-10 font-bold">Projects</h3>
             <div className="flex justify-center lg:justify-start">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">  

@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
 import Projects from "./components/Projects";
 import About from "./components/About";
-import Contact from "./components/Contact";
+import Faq from "./components/Faq";
+import BlogsSection from "./components/Blogs";
+
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Landing></Landing>
       <Projects></Projects>
       <About></About>
-      <Contact></Contact>
+      <Faq></Faq>
+      <BlogsSection></BlogsSection>
       <Footer></Footer>
     </div>
   );
