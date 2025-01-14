@@ -22,7 +22,7 @@ export default function Blog() {
 
             <div className="grid my-40 grid-cols-1 lg:grid-cols-3 gap-6">
                 {posts.map((post) => (
-                    <div key={post.id} className="card card-compact bg-base-100 w-96 shadow-xl">
+                    <div key={post.id} className="card card-compact bg-base-100 lg:w-96 shadow-xl">
                         <figure>
                             <Image
                                 src={post.image || "/assets/tehran.jpg"}

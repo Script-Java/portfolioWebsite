@@ -15,7 +15,7 @@ const Landing = () => {
     };
 
     return (
-        <div id="home" className="my-40">
+        <div id="home" className="my-40 lg:my-20">
             <div>
                 <div className="flex items-center justify-center h-[90vh]">
                     <div className="container block lg:flex lg:items-center lg:justify-between">

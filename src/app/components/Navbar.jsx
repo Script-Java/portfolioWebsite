@@ -23,7 +23,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="mb-40">
+        <div className="mb-40 lg:mb-0">
             <div className="navbar p-4 bg-base-100">
               <div className="flex-1">
                 <Link href={'/'} className="btn btn-ghost" passHref>
