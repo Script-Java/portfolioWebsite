@@ -16,7 +16,7 @@ const BlogsSection = () => {
             <div className="flex justify-center lg:justify-start">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">  
 
-                <div className="card bg-base-100 p-4 w-96 shadow-xl">
+                <div className="card bg-base-100 p-4 lg:w-96 shadow-xl">
                   <figure>
                     <Image src={img1} alt="project 1"/>
                   </figure>
@@ -33,7 +33,7 @@ const BlogsSection = () => {
                   </Link>
                 </div>
 
-                <div className="card bg-base-100 p-4 w-96 shadow-xl">
+                <div className="card bg-base-100 p-4 lg:w-96 shadow-xl">
                   <figure>
                     <Image src={img2} alt="project 2"/>
                   </figure>
@@ -49,7 +49,7 @@ const BlogsSection = () => {
                   </Link>
                 </div>
 
-                <div className="card bg-base-100 p-4 w-96 shadow-xl">
+                <div className="card bg-base-100 p-4 lg:w-96 shadow-xl">
                   <figure>
                     <Image src={img3} alt="project 3"/>
                   </figure>
@@ -68,7 +68,7 @@ const BlogsSection = () => {
 
                 </div>
 
-                <div className="card bg-base-100 p-4 w-96 shadow-xl">
+                <div className="card bg-base-100 p-4 lg:w-96 shadow-xl">
                   <figure>
                     <Image src={img4} alt="project 4"/>
                   </figure>

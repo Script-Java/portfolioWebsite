@@ -14,13 +14,6 @@ const Navbar = () => {
     setMenuOpen((prev) => !prev);
   }
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({behavior: "smooth"});
-    }
-  }
-
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/atrinResume.pdf'; // Path to your resume file in the public folder
@@ -30,8 +23,8 @@ const Navbar = () => {
 
 
     return (
-        <div className="">
-            <div className="navbar bg-base-100">
+        <div className="mb-40">
+            <div className="navbar p-4 bg-base-100">
               <div className="flex-1">
                 <Link href={'/'} className="btn btn-ghost" passHref>
                   <Image src={logo} alt="Atrin logo" width={40} height={40}/>

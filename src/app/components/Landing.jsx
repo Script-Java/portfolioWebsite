@@ -15,12 +15,12 @@ const Landing = () => {
     };
 
     return (
-        <div id="home" className="my-40 lg:my-10">
+        <div id="home" className="my-40">
             <div>
                 <div className="flex items-center justify-center h-[90vh]">
                     <div className="container block lg:flex lg:items-center lg:justify-between">
                         <div className="text-center lg:text-left">
-                            <h3 className="text-2xl lg:text-3xl my-4">Hey there 👋🏼</h3>
+                            <h3 className="text-2xl lg:text-3xl mt-40 lg:mt-4">Hey there 👋🏼</h3>
                             <h1 className="text-4xl lg:text-6xl max-w-6xl text-primary font-bold my-4">
                                 I'm Atrin Shahroudi a Software Developer
                             </h1>
@@ -48,12 +48,14 @@ const Landing = () => {
                             </div>
                         </div>
                         <div className="flex justify-center lg:justify-end my-4">
-                            <Image
-                                className="rounded-xl -rotate-6 my-20 lg:my-4 shadow-primary shadow-2xl"
-                                src={me}
-                                width={400}
-                                alt="Atrin Shahroudi"
-                            />
+                        <Image
+                            className="rounded-xl rotate-0 lg:-rotate-6 my-10 lg:my-4 shadow-primary shadow-2xl"
+                            src={me}
+                            width={400} // Set smaller width for default
+                            // Add height for consistency
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 400px"
+                            alt="Atrin Shahroudi"
+                          />
                         </div>
                     </div>
                 </div>
