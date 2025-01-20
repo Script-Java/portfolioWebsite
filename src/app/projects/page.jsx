@@ -7,17 +7,19 @@ import Navbar from "../components/Navbar";
 import img1 from "../assets/mtl.jpg";
 import img2 from "../assets/TFPNB.jpg";
 import img3 from "../assets/tfsm.jpg";
-import img4 from "../assets/pa.jpg";
+import img4 from "../assets/pap.jpg";
 import img5 from "../assets/lbj.jpg";
 import img6 from "../assets/locklair.jpg";
 import img7 from "../assets/data.jpg";
 import img8 from "../assets/tokentrail.jpg";
 import img9 from "../assets/motitask.jpg";
 import img10 from "../assets/nar.jpg";
+import img11 from "../assets/brilliance.jpg";
 
 export default function Portfolio() {
     const projects = [
         { url: "https://premierpa.claims/", img: img4, alt: "premierpa" },
+        { url: "https://www.brillianceskin.us/", img: img11, alt: "brilliance skin" },
         { url: "https://texasfivestarmarketing.com/", img: img3, alt: "texasfivestarmarketing" },
         { url: "https://texasfivestarpaintandbody.com/", img: img2, alt: "texasfivestarpaintandbody" },
         { url: "https://magictouchpaintingllc.com/", img: img1, alt: "magic touch" },
