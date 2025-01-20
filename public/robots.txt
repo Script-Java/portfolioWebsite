@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://atrinshahroudi.com
+
+# Sitemaps
+Sitemap: https://atrinshahroudi.com/sitemap.xml
