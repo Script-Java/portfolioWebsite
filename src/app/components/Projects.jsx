@@ -2,7 +2,7 @@ import Image from "next/image";
 import img1 from "../assets/mtl.jpg"
 import img2 from "../assets/TFPNB.jpg"
 import img3 from "../assets/tfsm.jpg"
-import img4 from "../assets/pa.jpg"
+import img4 from "../assets/pap.jpg"
 import Link from "next/link";
 import { FaRegWindowRestore } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
