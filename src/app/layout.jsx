@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ export const metadata = {
   ],
   author: "Atrin Shahroudi",
   applicationName: "Atrin Shahroudi Portfolio",
-  canonical: "https://atrinshahroudi.com", // Add canonical tag
+  canonical: "https://atrinshahroudi.com", 
   openGraph: {
     type: "website",
     url: "https://atrinshahroudi.com",
@@ -53,13 +54,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@atrinshahroudi", // Replace with your Twitter handle
+    site: "@atrinshahroudi", 
     title: "Atrin Shahroudi | Web Dev & SEO Specialist",
     description:
       "Helping businesses grow with expert web development, SEO, and digital marketing strategies.",
     image: "https://atrinshahroudi.com/assets/preview.jpg",
   },
-
   xRobotsTag: [
     { path: "/private/*", value: "noindex, nofollow" },
     { path: "/public/*", value: "index, follow" },
@@ -69,7 +69,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-            <Head>
+      <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
@@ -92,6 +92,32 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
       </Head>
+      <Script
+        id="facebook-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '817909067143723');
+            fbq('track', 'PageView');
+          `,
+        }}
+      />
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src="https://www.facebook.com/tr?id=817909067143723&ev=PageView&noscript=1"
+        />
+      </noscript>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
