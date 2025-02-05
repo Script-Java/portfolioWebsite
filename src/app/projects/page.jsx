@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import Script from "next/script";
 import img1 from "../assets/mtl.jpg";
 import img2 from "../assets/TFPNB.jpg";
 import img3 from "../assets/tfsm.jpg";
@@ -51,6 +52,17 @@ export default function Portfolio() {
 
     return (
         <div className="container mx-auto p-4">
+            <Script
+                id="facebook-pixel-projects"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        if (typeof window !== 'undefined' && window.fbq) {
+                            fbq('track', 'PageView', { page: 'Projects' });
+                        }
+                    `,
+                }}
+            />
             <Navbar></Navbar>
 
             <div className="my-40">

@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -70,11 +71,29 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Facebook Pixel Script inside <head> */}
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <meta name="author" content="Atrin Shahroudi" />
+        <meta name="application-name" content={metadata.applicationName} />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:image" content={metadata.openGraph.images[0].url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:site" content={metadata.twitter.site} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.images[0]} />
+        
+        {/* Facebook Pixel */}
         <Script
           id="facebook-pixel"
-          strategy="beforeInteractive" // Ensures it loads inside <head>
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -85,12 +104,12 @@ export default function RootLayout({ children }) {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '817909067143723');
+              fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}');
               fbq('track', 'PageView');
             `,
           }}
         />
-      </head>
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         {/* NoScript Fallback */}
@@ -99,7 +118,7 @@ export default function RootLayout({ children }) {
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=817909067143723&ev=PageView&noscript=1"
+            src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
             alt="Facebook Pixel"
           />
         </noscript>
