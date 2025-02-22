@@ -10,33 +10,32 @@ import img2 from "../assets/TFPNB.jpg";
 import img3 from "../assets/tfsm.jpg";
 import img4 from "../assets/pap.jpg";
 import img5 from "../assets/lbj.jpg";
-import img6 from "../assets/locklair.jpg";
-import img7 from "../assets/data.jpg";
-import img8 from "../assets/tokentrail.jpg";
-import img9 from "../assets/motitask.jpg";
-import img10 from "../assets/nar.jpg";
 import img11 from "../assets/brilliance.jpg";
+import img12 from "../assets/anubis.jpg";
+import img13 from "../assets/dfwglass.jpg";
+import img14 from "../assets/glassgo.jpg";
+import img15 from "../assets/glassrepl.jpg";
+import img16 from "../assets/glasspro.jpg";
+import img17 from "../assets/bayarea.jpg";
+import img18 from "../assets/atrinwebdev.jpg";
 
 export default function Portfolio() {
     const projects = [
+        { url: "https://anubissmokeshop.com/", img: img12, alt: "anubissmokeshop" },
+        { url: "https://www.atrinwebdev.com/", img: img18, alt: "atrinwebdev" },
+        { url: "https://www.bayareapa.com/", img: img17, alt: "bayarea" },
+        { url: "https://glassreplacementpros.com/", img: img16, alt: "glasspros" },
+        { url: "https://dallasglassandauto.com/", img: img15, alt: "dallasglassreplacement" },
+        { url: "https://dfwglassmart.com/", img: img13, alt: "dfwglass" },
+        { url: "https://glassgollc.com/", img: img14, alt: "glassgo" },
         { url: "https://premierpa.claims/", img: img4, alt: "premierpa" },
-        { url: "https://www.brillianceskin.us/", img: img11, alt: "brilliance skin" },
+        { url: "https://www.brillianceskin.us/", img: img11, alt: "brillianceskin" },
         { url: "https://texasfivestarmarketing.com/", img: img3, alt: "texasfivestarmarketing" },
         { url: "https://texasfivestarpaintandbody.com/", img: img2, alt: "texasfivestarpaintandbody" },
-        { url: "https://magictouchpaintingllc.com/", img: img1, alt: "magic touch" },
+        { url: "https://magictouchpaintingllc.com/", img: img1, alt: "magictouch" },
         { url: "https://lbjfoodmart.netlify.app", img: img5, alt: "lbj" },
     ];
 
-    const flaskProjects = [
-        { url: "https://locklair.onrender.com", img: img6, alt: "locklair" },
-        { url: "https://datavisualization-67od.onrender.com", img: img7, alt: "datavisualization" },
-        { url: "https://tokentrail.onrender.com", img: img8, alt: "tokentrail" },
-        { url: "https://motitask.onrender.com", img: img9, alt: "Motitask" },
-    ];
-
-    const shopifyProjects = [
-        { url: "https://narcissistclothing.co/", img: img10, alt: "Narcissist" },
-    ];
 
     const renderProjects = (projects) =>
         projects.map(({ url, img, alt }) => (
@@ -45,7 +44,7 @@ export default function Portfolio() {
                     <div className="mockup-browser-toolbar">
                         <div className="input">{url}</div>
                     </div>
-                    <Image src={img} alt={alt} />
+                    <Image className="h-64" src={img} alt={alt} />
                 </div>
             </Link>
         ));
@@ -76,19 +75,6 @@ export default function Portfolio() {
                         </div>
                     </div>
 
-                    <div>
-                        <h3 className="p-4 text-xl my-10 font-bold">Python / Flask 🐍</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {renderProjects(flaskProjects)}
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 className="p-4 text-xl my-10 font-bold">Shopify 🛒</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {renderProjects(shopifyProjects)}
-                        </div>
-                    </div>
                 </div>
             </div>
 
